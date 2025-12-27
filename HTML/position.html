@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 150vh;
+           
+        }
+
+        .s-div{
+            width: 700px;
+            height: 400px;
+            background-color: lightgreen;
+            border: 2px solid black;
+            
+           
+        }
+        .p-div {
+            width: 500px;
+            height: 200px;
+            margin: auto;
+            background-color: red;
+            border: 2px solid black;
+            position: sticky;
+            top: 0px;
+            
+        }
+
+        .c-div {
+            width: 100%;
+            height: 100px;
+            background-color: yellow;
+            border: 2px solid black;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .green {
+            background-color: rgb(9, 45, 9);
+            top: 10px;
+            right: 10px;
+    }
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Libero mollitia in, 
+        aspernatur suscipit fugit aut blanditiis repellendus, hic magni officia adipisci commodi ullam consectetur,
+         quidem placeat. Dignissimos atque minus corporis!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Praesentium magni illo autem, id vero quo rem enim quod amet quibusdam inventore ullam quasi placeat dolores.
+         Quibusdam commodi iusto sed inventore!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         Molestiae quibusdam deserunt laudantium fugiat minus sit debitis iusto,
+          in odio itaque nulla commodi illum culpa enim! Aspernatur, voluptates delectus? Expedita, porro.
+    </p>
+    <br>
+    <div class="s-div">
+        <div class="p-div">
+            <div class="c-div">Chal Message Type Kar</div>
+        </div>
+    </div>
+
+  
+</body>
+</html>

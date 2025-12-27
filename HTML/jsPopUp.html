@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUps</title>
+</head>
+<body>
+    <h1>PopUps</h1>
+    <script>     
+
+        // Alert
+        alert("You opened the browser");
+            
+        // Confirm
+        let user_Confirmation = confirm("Do you want to continue")
+        console.log(user_Confirmation);
+        if (user_Confirmation) {
+            document.writeln("User clicked OK");
+        }
+        else {
+            document.writeln("User clicked cancel");
+        }
+
+        document.writeln("<br>");
+
+        // Taking user input
+        let aa = prompt("Enter your name");
+        document.writeln("Hello " + aa);
+        
+        document.writeln("<br>");
+
+        //  Adding two numbers by taking user input
+        alert("Adding the two number ");
+        let a = Number(prompt("Enter the first number: "));
+        let b = Number(prompt("Enter the second number "));
+        let result = ("The result is: " + (a + b));
+        document.writeln(result);
+
+        function recu (a){
+            if (a <= 0) {
+                return;
+            }
+            document.writeln(a);
+            return recu(a-1);
+        }
+        
+
+    </script>
+</body>
+</html>

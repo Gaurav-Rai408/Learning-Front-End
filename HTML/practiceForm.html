@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practiceForm.css">
+</head>
+<body>
+    <form action="">
+    <h2>Student Information Form</h2>
+    <fieldset>
+        <legend>Personal Information</legend>
+        <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="fullname">
+        </div>
+        <br>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="mail" autocomplete="off">
+        </div>
+        <br>
+        
+        <div>
+            <label for="Password">Password:</label>
+            <input type="Password" id="Password" name="Password">
+        </div>
+        <br>
+
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <br>
+        
+        <div>
+            <label for="bio" >Short Bio:</label><br>
+            <textarea name="bio" id="bio" cols="30"  rows="2" class="textarea" placeholder="Enter something about you" ></textarea> 
+        </div>
+        
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>Gender</legend>
+            <label><input type="radio" name="gender" value="M">Male </label><br>
+            <label><input type="radio" name="gender" value="F">Female</label> <br>
+            <label><input type="radio" name="gender" value="O">Other</label> <br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>Area Of Interest</legend>
+        <label><input type="checkbox" name="Interest" value="WD">Web Development</label> <br>
+        <label><input type="checkbox" name="Interest" value="AI">Artificial Intelligence</label> <br>
+        <label><input type="checkbox" name="Interest" value="DS">Data Science</label> <br>
+
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>Programming Skill Level</legend>
+        <label for="rating">Rate Your Skill(0 to 10):</label><br>
+        <input type="range" name="Level" id="rating" value="5" min="0" max="10"><br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>Resume</legend>
+        <label for="resume">Upload Resume :</label>
+        <input type="file" name="resume" id="resume">
+        
+    </fieldset>
+    <br>
+    
+        <div>
+            <button type="submit">SUBMIT</button> 
+            <button type="reset">RESET</button>
+        </div>
+    </form>
+</body>
+</html>

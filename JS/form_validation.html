@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From validation</title>
+</head>
+<body>
+    <form>
+        <!-- empty, letter < 2 , > 30, letters -->
+        <label for="usr">Username :</label>
+        <input type="text" id="usr" name="username">
+        <br>
+        <p style="color: red;" id="error"></p>
+        
+
+        <label for="email">Email: </label>
+        <input type="email" id="email">
+        <br>
+        <br>
+
+        <label for="pwd">Password :</label>
+        <input type="password" id="pwd" name="password">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        f = document.querySelector("form");
+        f.addEventListener("submit",(event)=>{
+            event.preventDefault(); //data reset
+
+           let usrname = document.getElementById("usr").value.trim();
+           let pwdregex = /^$/;
+           if(!pwdregex.test(usrname)){
+            alert("Invalid password");
+           }
+        //    else{
+        //     alert("validpassword");
+        //    }
+
+            let un = document.getElementById("usr").value.trim();
+            let unregex = /^[A-Za-z]+$/
+             if(un === ""){
+                //alert("Username cannot be empty");
+                document.getElementById("error").innerText = "User name cannot be empty";
+            } else if(un.length < 2){
+                alert("Name cannot be less than 2 characters");
+            } else if(un.length > 30) {
+                alert("Name cannot be more than 30 characters");
+            } else if(!unregex.test(un)){
+                alert("write only letters");
+            }
+            else {
+                alert("Valid name");
+            } 
+            
+            
+            // Email Validation
+            
+        let email = document.getElementById("email").value.trim();
+       let emaiRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+       if(!emaiRegex.test(email)){
+            alert(" Invalid email");
+       }else {
+        alert("Valid Email");
+       }
+
+        //Password validation
+       const password = document.getElementById("pwd").value; 
+
+        // At least one letter/At least one digit At least one special character from @$!%*?&/Minimum length 8
+
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; 
+        if (!passwordPattern.test(password)) { 
+            alert("Password must be at least 8 characters long and include at least one letter and one number."); 
+        } 
+        alert("Password is valid!"); 
+        
+        alert("Form Submitted");
+            
+        });
+    </script>
+</body>
+</html>

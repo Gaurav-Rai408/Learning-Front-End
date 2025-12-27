@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 1000vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>From and Input Events Demo</h1>
+
+    <form id="myForm" action="">
+        <label for="input">Enter your name: </label>
+        <input id="input" type="text" name="username" autocomplete="hlo" placeholder="kuch bhi type kr bhai"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+
+        // Submit
+        document.querySelector("#myForm").addEventListener('submit',(event)=> {
+            // alert("form submitted!");
+            event.preventDefault();
+            console.log("form submitted!"); 
+            
+        });
+
+        // change
+        document.querySelector("#input").addEventListener('change',(event)=>{
+           console.log(`Input changed to : ${event.target.value}`);    
+        });
+
+        // focus
+        document.querySelector("#input").addEventListener('focus', ()=> {
+            console.log("input field focused.");
+        });
+
+        // blur
+        document.querySelector("#input").addEventListener('blur', ()=> {
+            console.log("input field blured.");
+        });
+
+        // input
+        // event --> can take any var
+        document.querySelector("#input").addEventListener('input', (event)=> {
+            console.log(`current value: ${event.target.value}`);
+        });
+
+        // keyboard
+        document.querySelector("#input").addEventListener('keydown',(dasf)=>{
+            console.log(`keydown ${dasf.target.value}`);
+        }) 
+
+        document.querySelector("#input").addEventListener('keyup',(dasf)=>{
+            console.log(`keyup ${dasf.target.value}`);
+        }) 
+
+        /* Window Function */
+        
+        // DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', ()=> {
+            console.log("DOM fully loaded and parsed");
+        })
+
+        // resize
+        window.addEventListener('resize', ()=> {
+            console.log("Window resized");
+        })
+
+        // scroll
+        window.addEventListener('scroll', ()=> {
+            console.log("User is scrolling");
+        })
+        
+        
+    </script>
+</body>
+</html>
+<!-- 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Form & Input Events</title> 
+</head> 
+<body> 
+
+<h2>Form & Input Events Demo</h2> 
+
+    <form id="myForm"> 
+        <label>Enter your name:</label>
+        <input type="text" id="myInput" placeholder="Type something..." name="usrname"><br><br> 
+        <button type="submit">Submit</button> 
+    </form> 
+
+<script> 
+// submit 
+document.querySelector('#myForm').addEventListener('submit', (event) => { 
+event.preventDefault();
+console.log('Form submitted!'); 
+}); 
+
+// change 
+document.querySelector('#myInput').addEventListener('change', (event) => { 
+alert(Input changed to: ${event.target.value});
+}); 
+
+// focus 
+document.querySelector('#myInput').addEventListener('focus', () => { 
+console.log('Input field focused!'); 
+});
+
+// blur 
+document.querySelector('#myInput').addEventListener('blur', () => { 
+console.log('Input field lost focus!'); 
+}); 
+
+// input 
+document.querySelector('#myInput').addEventListener('input', (event) => { 
+console.log(Current value: ${event.target.value}); 
+}); 
+</script> 
+</body> 
+</html>
+ -->

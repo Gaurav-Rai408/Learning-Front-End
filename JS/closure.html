@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Closure Returning Function</h2>
+    <script>
+        function x () {
+            var a = 10;
+            
+            return function y () {
+                console.log(a);
+            }
+        }
+
+
+        let res = x();
+        // console.log(x());
+        res();
+
+
+        function a() {
+            var count = 0;
+            return function b() {
+                count += 10;
+                console.log(count);
+            }
+        }
+
+        let res2 = a();
+        res2();
+        res2();
+        res2();
+
+        // console.log("1. Open BMS");
+        // console.log("2. Search Movie");
+        // console.log("3. select Time");
+        // console.log("4. select Seat");
+        // console.log("5. Book Ticket");
+
+        // setTimeout(() => {
+        //     console.log("1. Open BMS");
+        // }, 1000);
+
+        // setTimeout(() => {
+        //     console.log("2. Search Movie");
+        // }, 5000);
+
+        // setTimeout(() => {
+            
+        // }, 2500);
+
+        // setTimeout(() => {
+        //     console.log("3. select Time");
+        // }, 2500);
+
+        // setTimeout(() => {
+        //     console.log("4. select Seat");
+        // }, 3000);
+
+        // setTimeout(() => {
+        //     console.log("5. Book Ticket");
+        // }, 3500);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        div {
+            background-color: beige;
+            border: 2px solid maroon;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="h">Dom Manipulation</h1>
+    <h3>Add or Remove elements</h3>
+    <button onclick="addBox()">Add Box</button>
+    <button onclick="removeBox()">Remove Box</button>
+    
+    <script>
+        // document.getElementById("h").style.backgroundColor = "pink";
+        function addBox() {
+            b = document.querySelector("body");
+            myDiv = document.createElement("div");
+            b.appendChild(myDiv);
+        }
+
+        function removeBox() {
+            b = document.querySelector("body");
+            divItem = document.querySelector("div");
+            b.removeChild(divItem);
+        }
+
+    </script>
+</body>
+</html>

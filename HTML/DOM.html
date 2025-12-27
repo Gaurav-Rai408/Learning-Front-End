@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM In JS</title>
+</head>
+<body>
+    <h1 id="heading">Heading</h1>
+    <h1 id="h">Heading</h1>
+    <p class="p">Para 1</p>
+    <p>Para 2</p>
+    <p class="p">Para 3</p>
+    <p>Para 4</p>
+    <button onclick="change()"> click for change</button>
+
+    <input type="text" name = "username" placeholder="First Name">
+    <input type="text" name = "username" placeholder="Last Name">
+    <button onclick="showValue()"> Click Me</button>
+
+    <p class="showValue" style="color: blue;"></p>
+
+    <p class="p1">asgsa</p>
+    <p class="p1">agsag</p>
+    <p >sagasg</p>
+    <p class="p1">asa</p>
+
+    <button onclick="change1()">click for change</button>
+
+
+    <script>
+        function change1() {
+            const para1 = document.querySelectorAll(".p1");
+            for(i = 0; i < para1.length; i++){
+                para1[i].style.backgroundColor = "pink";
+            }
+        }
+
+        function showValue() {
+        const users = document.getElementsByName("username");
+        let allValues = "";
+        for(i = 0; i < users.length; i++) {
+            allValues += users[i].value + " ";
+        }
+        document.querySelector(".showValue").innerText = allValues.trim();
+    }
+
+       const classPara = document.getElementsByClassName("p");
+        for(i = 0; i < classPara.length; i++) {
+            classPara[i].style.backgroundColor = "yellow";
+            classPara[i].style.fontWeight = "bold";
+            classPara[i].textContent = "Odd Para";
+        }
+
+        function change() {
+        document.getElementsByTagName("p")[0].style.color = "red"; // 1st para
+        document.getElementsByTagName("p")[1].style.color = "blue";
+        document.getElementsByTagName("p")[3].style.color = "purple";
+
+        const para = document.getElementsByTagName("p");
+        for(i = 0; i < para.length; i++) {
+            para[i].style.backgroundColor = "cyan";
+            para[i].style.fontSize = "30px";
+        }
+
+        document.getElementById("heading").textContent = "Dom in JavaScript";
+        document.getElementById("h").innerHTML = "<i>DOM in js </i>"
+    }
+
+    
+    </script>
+</body>
+</html>

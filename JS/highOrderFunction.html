@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function order(callprepare) {
+            console.log("Order confirmed.");
+            prepare();
+        }
+
+        function prepare() {
+            console.log("Order Preparing..");
+        }
+
+
+        // Map
+        let arr = [1 ,2, 3];
+        let square = arr.map((n)=> n * n);
+        console.log("Squared: " , square);
+        // square.forEach(element => {
+        //     console.log(element);
+        // });
+
+        // Reduce
+        let odd = square.filter((n) => n % 2 !== 0);
+        console.log("Odd Number: " , odd);
+        // odd.forEach(num => {
+        //     console.log(num);
+            
+        // });
+
+        let add = arr.reduce((n,sum) => n + sum, 0);
+        console.log("Addition: " , add);
+    </script>
+</body>
+</html>
+
+<!-- const numbers = [1, 2, 3, 4, 5, 6];
+
+// Step 1: Double each number
+const doubled = numbers.map(num => num * 2);
+
+// Step 2: Keep only numbers greater than 5
+const filtered = doubled.filter(num => num > 5);
+
+// Step 3: Find the sum of remaining numbers
+const total = filtered.reduce((sum, num) => sum + num, 0);
+
+console.log("Doubled:", doubled);   // [2, 4, 6, 8, 10, 12]
+console.log("Filtered:", filtered); // [6, 8, 10, 12]
+console.log("Total:", total);       // 36 
+
+
+
+//HOF with multiple arguments
+function order(callprepare, calldeliver) {
+  console.log("Ordered Coffee");
+  callprepare();
+  calldeliver();
+}
+//Callback function
+function prepare() {
+  console.log("Preparing Coffee");
+}
+// Callback function
+function delivere() {
+  console.log("Delivered Coffee");
+}
+order(prepare, delivere);-->

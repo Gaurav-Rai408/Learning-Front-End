@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animattion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            animation-name: example;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        h1 {
+            animation-name: fadeIn;
+            animation-name: fadeOut;
+            animation-duration: 12s;
+            animation-iteration-count: 3;
+            animation-timing-function: ease-in;
+            
+        }
+        @keyframes example {
+            0% {background-color: red;}
+            25% {background-color: coral;}
+            50% {background-color: lavender;}
+            75% {background-color: royalblue;}
+            100% {background-color: palegreen;}
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>hello World</h1>
+    </div>
+</body>
+</html>

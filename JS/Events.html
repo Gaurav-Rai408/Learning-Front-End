@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            height: 200px;
+            width: 200px;
+            background-color: rgba(246, 156, 48, 0.907);
+            border: 2px solid rgb(77, 235, 244);
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Hello</div>
+    <h4>display output: <p id="p"></p></h4>
+    
+
+    <script>
+        let box = document.querySelector("#box");
+
+        // Mouse Events
+        box.addEventListener("click", () => {
+            box.style.backgroundColor = "lightblue";
+        })
+
+        box.addEventListener("dblclick", () => {
+            box.style.backgroundColor = "yellow";
+        })
+
+        box.addEventListener("mouseover", () => {
+            // alert("ASSHOLE");
+            // box.textContent = "Vanakkam";
+            box.innerText = `Vanakkam`;
+        })
+
+        box.addEventListener("mouseout", () => {
+            box.innerHTML = "<u>Hello</u>";
+        })
+
+        box.addEventListener("mousemove" , () => {
+            // box.innerText = `X: ${event.offsetX} and Y: ${events.offsetY}`;
+            let text = document.getElementsByTagName("p")[0];
+            text.textContent = `X: ${event.offsetX} and Y: ${event.offsetY}`;
+        })
+    </script>
+</body>
+</html>

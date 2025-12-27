@@ -1,0 +1,39 @@
+/* Tag/Element selectors */
+h1 {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+/* id selector */
+#para {
+     background-color: greenyellow;
+}
+
+#heading {
+    background-color: yellow;
+}
+
+/* class selector */
+.podd {
+    text-align: center;
+}
+
+.uline {
+    text-decoration: underline;
+ }   
+
+
+/* univeral selector */
+
+* {
+    color: red;
+}
+
+/* grouping selectors */
+
+p , h1 {
+    background-color: yellow;
+}

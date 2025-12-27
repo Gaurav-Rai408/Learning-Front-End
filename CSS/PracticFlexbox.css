@@ -1,0 +1,15 @@
+
+/* .nav div {
+    width: 50vh;
+    height: 25vh;
+    background-color: aquamarine;
+    flex-direction: column;
+
+} */
+
+#div1 {
+    /* width: 5px;
+    height: 5px; */
+    border: 2px;
+    border-color: rgb(16, 16, 128);
+}

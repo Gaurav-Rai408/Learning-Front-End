@@ -1,0 +1,46 @@
+input {
+    background-color: lightcyan;
+} 
+
+#email {
+    color: rgb(21, 0, 255);
+}
+
+.textarea {
+    border-color: rgb(255, 206, 8);
+    
+}
+
+legend {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="password"] {
+    color: red;
+}
+
+button[type="submit"] {
+    background-color: rgb(136, 235, 233);
+}
+
+input[type="file"] {
+    font-style: italic;
+}
+
+input[name="Interest"] {
+    accent-color: rgb(255, 255, 0);
+}
+
+input:focus {
+    border-color: rgb(243, 57, 11);
+    border: 100px red;
+}
+
+button[type="submit"]:hover {
+    color:rgb(245, 78, 13)
+}
+
+input:focus {
+    border-color: crimson;
+}
