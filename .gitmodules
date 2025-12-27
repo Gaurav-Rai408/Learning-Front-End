@@ -1,0 +1,6 @@
+[submodule "Portfolio"]
+	path = Portfolio
+	url = https://github.com/Gamana/Portfolio.git
+[submodule "React"]
+	path = React
+	url = https://github.com/Gaurav-Rai408/ReactReduxPractice-
